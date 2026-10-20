@@ -1,0 +1,11 @@
+# VS Code temporary files and databases
+.vscode/
+**/.vscode/
+
+# Compiled files
+*.o
+*.out
+*.exe
+
+# Other generated files
+*.db
