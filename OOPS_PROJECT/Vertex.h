@@ -4,10 +4,11 @@
 //each object of this class is a vertex of the graph
 class Vertex{
     private:
-        char ver;
+        string ver;
+        static int count = 0;
 
     public:
-        Vertex(char ver = 'A'); //constructor with default label value as 'A'
+        Vertex(string ver); //constructor with default label value as 'A'
 
         ~Vertex(); //destructor
 
