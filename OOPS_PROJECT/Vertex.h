@@ -8,7 +8,7 @@ class Vertex{
         static int count = 0;
 
     public:
-        Vertex(string ver); //constructor with default label value as 'A'
+        Vertex(string ver); //constructor for creating unique vertex for each instance of class
 
         ~Vertex(); //destructor
 
