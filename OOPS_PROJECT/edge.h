@@ -1,6 +1,6 @@
 #ifndef e
 #define e
-#include "Vertex.h"
+#include "vertex.h"
 
 //each object of this class refers to a pair of vertices, thus an edge of the graph
 class Edge{
