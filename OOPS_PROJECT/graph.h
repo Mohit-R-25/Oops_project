@@ -1,7 +1,7 @@
 #ifndef g
 #define g
-#include "Vertex.h"
-#include "Edge.h"
+#include "vertex.h"
+#include "edge.h"
 class Graph{
     private:
         static const int MAX = 10; //maximum number of vertices allowed, must be constant and static because it is an instance of class, not each individual graph object
