@@ -7,7 +7,7 @@ class Graph{
         static const int MAX = 10; //maximum number of vertices allowed, must be constant and static because it is an instance of class, not each individual graph object
         
         Vertex vertices[MAX];
-        int adjmatrix[MAX][MAX];
+        int adjmatrix[MAX][MAX] = {};
         int vertex_count;
 
 
