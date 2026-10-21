@@ -7,7 +7,7 @@ graph::graph(){
     vertex_count = 0;
 }
 
-graph::add_vertex(string ver) {
+bool graph::add_vertex(string ver) {
 
     if(vertex_count > MAX){
         return false;
@@ -27,7 +27,7 @@ graph::add_vertex(string ver) {
     return true;
 }
 
-graph::add_edge(string source, string dest, int weight){
+bool graph::add_edge(string source, string dest, int weight){
     int src = -1, dst = -1;
 
     for (int i = 0; i < vertex_count; i++)
@@ -48,7 +48,7 @@ graph::add_edge(string source, string dest, int weight){
     return true;
 }
 
-graph::displaygraph(){
+void graph::displaygraph(){
     cout << "  ";
     for(int i = 0; i < vertex_count; i++){
         cout << vertices.get_label() << " ";
@@ -68,4 +68,3 @@ graph::displaygraph(){
         }
     }
 }
-
