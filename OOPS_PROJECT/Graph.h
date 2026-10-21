@@ -16,8 +16,8 @@ class Graph{
 
         ~Graph(); //destructor
 
-        bool add_vertex(char ver); // return true if the vertex was successfully added (to make sure it does not go higher than MAX)
-        bool add_edge(char source, char dest, int weight = 1);
+        bool add_vertex(string ver); // return true if the vertex was successfully added (to make sure it does not go higher than MAX)
+        bool add_edge(string source, string dest, int weight = 1);
 
         void displaygraph(); //print the graph as a 2d array in which each row and coloumn represents a vertex(the matrix will be symmetric because its undirected)
         /* example output:
