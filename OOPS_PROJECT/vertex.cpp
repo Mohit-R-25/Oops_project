@@ -1,31 +1,31 @@
 #include "vertex.h"
 using namespace std;
 
-int Vertex::count = 0;
+int vertex::count = 0;
 
 //Default Constructor when label is not known
-Vertex::Vertex(){
+vertex::vertex(){
 	ver = "";
 }
 
 //Parameterised Constructor when label is known
-Vertex::Vertex(string ver){
+vertex::vertex(string ver){
 	this->ver = ver;
 	count++;
 }
 
-Vertex::~Vertex(){}
+vertex::~vertex(){}
 
 //Fns to return label, count
-string Vertex::get_label() const{
+string vertex::get_label() const{
 	return ver;
 }
 
-int Vertex::get_count(){
+int vertex::get_count(){
 	return count;
 }
 
 //Overloading of == operator
-bool Vertex::operator==(const Vertex& other) const {
+bool vertex::operator==(const vertex& other) const {
     return ver == other.ver;
 }
