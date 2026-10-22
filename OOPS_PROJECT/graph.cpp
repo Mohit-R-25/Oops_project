@@ -50,11 +50,13 @@ bool graph::add_edge(string source, string dest, int weight){
 
 void graph::displaygraph(){
     cout << "  ";
+    // Print column labels
     for(int i = 0; i < vertex_count; i++){
         cout << vertices[i].get_label() << " ";
     }
     cout << "\n";
 
+    // Print row labels and adjacency matrix
     for(int i = 0; i < vertex_count; i++){
         for(int j = 0; j < vertex_count; j++){
             if(j == 0){
