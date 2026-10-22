@@ -1,5 +1,6 @@
-#ifndef v
-#define v
+#include <string>
+#ifndef VERTEX_H
+#define VERTEX_H
 
 //each object of this class is a vertex of the graph
 class Vertex{
@@ -14,9 +15,9 @@ class Vertex{
 
         ~Vertex(); //destructor
 
-        string get_label(); //just return the ver of the object
+        string get_label() const; //just return the ver of the object
 
-        bool operator==(const Vertex& v) const; //to check if two objects of vertex class are having the same ver value
+        bool operator==(const Vertex& other) const; //to check if two objects of vertex class are having the same ver value
         static int get_count();
 
 };
