@@ -1,5 +1,5 @@
-#ifndef e
-#define e
+#ifndef EDGE_H
+#define EDGE_H
 #include "vertex.h"
 
 //each object of this class refers to a pair of vertices, thus an edge of the graph
@@ -14,13 +14,13 @@ class Edge{
 
         ~Edge();  //destructor
 
-        Vertex getsource(); //just return source vertex variable
+        Vertex getsource() const; //just return source vertex variable
 
-        Vertex getdest(); //return destination vertex
+        Vertex getdest() const; //return destination vertex
 
-        int getweight(); //return the weight of the edge object
+        int getweight() const; //return the weight of the edge object
 
-        bool operator==(const Edge &e)const; //to check whether 2 objects of edge class are the same by checking equality of their corresponding source and dest vertices
+        bool operator==(const Edge &other)const; //to check whether 2 objects of edge class are the same by checking equality of their corresponding source and dest vertices
         
 
 };
