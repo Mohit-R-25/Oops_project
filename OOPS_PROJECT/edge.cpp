@@ -1,4 +1,4 @@
-#include edge.cpp
+#include "edge.h"
 using namespace std;
 
 Edge::Edge(Vertex source, Vertex dest, int weight){
@@ -11,7 +11,7 @@ Edge::~Edge(){}
 
 //Fns to return source, destination, weight of edge
 Vertex Edge::getsource() const{return source;}
-Vertex Edge::getsdest() const{return dest;}
+Vertex Edge::getdest() const{return dest;}
 int Edge::getweight() const{return weight;}
 
 //Overloading of == operator
