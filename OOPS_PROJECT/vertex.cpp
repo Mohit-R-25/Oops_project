@@ -15,7 +15,9 @@ vertex::vertex(string ver){
 	count++;
 }
 
-vertex::~vertex(){}
+vertex::~vertex(){
+	count--;
+}
 
 //Fns to return label, count
 string vertex::get_label() const{
