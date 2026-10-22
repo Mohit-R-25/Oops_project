@@ -6,6 +6,7 @@ int vertex::count = 0;
 //Default Constructor when label is not known
 vertex::vertex(){
 	ver = "";
+	count++;
 }
 
 //Parameterised Constructor when label is known
