@@ -51,7 +51,7 @@ bool graph::add_edge(string source, string dest, int weight){
 void graph::displaygraph(){
     cout << "  ";
     for(int i = 0; i < vertex_count; i++){
-        cout << vertices.get_label() << " ";
+        cout << vertices[i].get_label() << " ";
     }
     cout << "\n";
 
