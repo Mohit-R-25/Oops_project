@@ -29,6 +29,8 @@ class graph{
 
         graph operator+(const graph& other) const; //for adding two graphs(idk logic)
         bool operator==(const graph& other) const; //for checking equality of each vertex and edge's weights to determine equality of 2 graphs
-        
+
+        friend ostream& operator<<(ostream& os, const graph& gr);
+        friend istream& operator>>(istream& is, graph& gr);
 };
 #endif
