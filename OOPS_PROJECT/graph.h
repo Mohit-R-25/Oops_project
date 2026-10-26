@@ -1,5 +1,5 @@
-#ifndef g
-#define g
+#ifndef GRAPH_H
+#define GRAPH_H
 #include "vertex.h"
 #include "edge.h"
 class graph{
