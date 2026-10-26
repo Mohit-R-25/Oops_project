@@ -22,6 +22,7 @@ class edge{
 
         bool operator==(const edge &other)const; //to check whether 2 objects of edge class are the same by checking equality of their corresponding source and dest vertices
         
-
+        friend ostream& operator<<(ostream& os, const edge& ed);
+        friend istream& operator>>(istream& is, edge& ed);
 };
 #endif
