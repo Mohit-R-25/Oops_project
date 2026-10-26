@@ -70,3 +70,51 @@ void graph::displaygraph(){
         }
     }
 }
+
+// Output: prints the adjacency matrix
+ostream& operator<<(ostream& os, const graph& gr){
+    os << "  ";
+    for(int i = 0; i < gr.vertex_count; i++)
+        os << gr.vertices[i] << " ";
+    os << "\n";
+
+    for(int i = 0; i < gr.vertex_count; i++){
+        os << gr.vertices[i] << " ";
+        for(int j = 0; j < gr.vertex_count; j++)
+            os << gr.adjmatrix[i][j] << " ";
+        os << "\n";
+    }
+    return os;
+}
+
+// Input format:
+//   n
+//   label1 label2 ... labeln
+//   m
+//   src dest weight     (m lines)
+istream& operator>>(istream& is, graph& gr){
+    gr = graph();                       // start from an empty graph
+    int n, m;
+
+    if(!(is >> n)) return is;
+    for(int i = 0; i < n; i++){
+        string label;
+        if(!(is >> label)) return is;
+        if(!gr.add_vertex(label)){      // duplicate or too many
+            is.setstate(ios::failbit);
+            return is;
+        }
+    }
+
+    if(!(is >> m)) return is;
+    for(int i = 0; i < m; i++){
+        string s, d;
+        int w;
+        if(!(is >> s >> d >> w)) return is;
+        if(!gr.add_edge(s, d, w)){      // unknown vertex
+            is.setstate(ios::failbit);
+            return is;
+        }
+    }
+    return is;
+}
