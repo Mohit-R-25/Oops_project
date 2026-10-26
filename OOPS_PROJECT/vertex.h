@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #ifndef vertex_H
 #define vertex_H
 
@@ -20,6 +21,9 @@ class vertex{
 
         bool operator==(const vertex& other) const; //to check if two objects of vertex class are having the same ver value
         static int get_count();
+
+        friend ostream& operator<<(ostream& os, const vertex& ver);
+        friend istream& operator>>(istream& is, vertex& ver)
 
 };
 #endif
