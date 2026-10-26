@@ -2,19 +2,19 @@
 #define g
 #include "vertex.h"
 #include "edge.h"
-class Graph{
+class graph{
     private:
         static const int MAX = 10; //maximum number of vertices allowed, must be constant and static because it is an instance of class, not each individual graph object
         
-        Vertex vertices[MAX];
+        vertex vertices[MAX];
         int adjmatrix[MAX][MAX] = {};
         int vertex_count;
 
 
     public:
-        Graph(); //constructor
+        graph(); //constructor
 
-        ~Graph(); //destructor
+        ~graph(); //destructor
 
         bool add_vertex(string ver); // return true if the vertex was successfully added (to make sure it does not go higher than MAX)
         bool add_edge(string source, string dest, int weight = 1);
@@ -27,8 +27,8 @@ class Graph{
             C   3   2   0
         */
 
-        Graph operator+(const Graph& other) const; //for adding two graphs(idk logic)
-        bool operator==(const Graph& other) const; //for checking equality of each vertex and edge's weights to determine equality of 2 graphs
+        graph operator+(const graph& other) const; //for adding two graphs(idk logic)
+        bool operator==(const graph& other) const; //for checking equality of each vertex and edge's weights to determine equality of 2 graphs
         
 };
 #endif
