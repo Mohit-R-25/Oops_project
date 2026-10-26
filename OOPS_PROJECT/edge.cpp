@@ -1,20 +1,20 @@
 #include "edge.h"
 using namespace std;
 
-Edge::Edge(Vertex source, Vertex dest, int weight){
+edge::edge(vertex source, vertex dest, int weight){
 	this->source = source;
 	this->dest = dest;
 	this->weight = weight;
 }
 
-Edge::~Edge(){}
+edge::~edge(){}
 
 //Fns to return source, destination, weight of edge
-Vertex Edge::getsource() const{return source;}
-Vertex Edge::getdest() const{return dest;}
-int Edge::getweight() const{return weight;}
+vertex edge::getsource() const{return source;}
+vertex edge::getdest() const{return dest;}
+int edge::getweight() const{return weight;}
 
 //Overloading of == operator
-bool Edge::operator ==(const Edge& other) const{
+bool edge::operator ==(const edge& other) const{
 	return (source == other.source && dest == other.dest)||(source == other.dest && dest == other.source); // Undirected graph so A-B = B-A
 }
