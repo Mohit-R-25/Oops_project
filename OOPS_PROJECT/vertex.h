@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
-#ifndef vertex_H
-#define vertex_H
+#ifndef VERTEX_H
+#define VERTEX_H
 
 using namespace std;
 //each object of this class is a vertex of the graph
