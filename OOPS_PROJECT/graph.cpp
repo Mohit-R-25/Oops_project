@@ -6,10 +6,13 @@ using namespace std;
 graph::graph(){
     vertex_count = 0;
 }
+graph::~graph()
+{
+}
 
 bool graph::add_vertex(string ver) {
 
-    if(vertex_count > MAX){
+    if(vertex_count >= MAX){
         return false;
     }
 
