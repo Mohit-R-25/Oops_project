@@ -18,3 +18,13 @@ int edge::getweight() const{return weight;}
 bool edge::operator ==(const edge& other) const{
 	return (source == other.source && dest == other.dest)||(source == other.dest && dest == other.source); // Undirected graph so A-B = B-A
 }
+
+ostream& operator<<(ostream& os, const edge& ed){
+    os << ed.source << " - " << ed.dest << " (weight " << ed.weight << ")";
+    return os;
+}
+
+istream& operator>>(istream& is, edge& ed){
+    is >> ed.source >> ed.dest >> ed.weight;    // input format: A B 5
+    return is;
+}
