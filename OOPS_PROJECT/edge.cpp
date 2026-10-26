@@ -16,7 +16,10 @@ int edge::getweight() const{return weight;}
 
 //Overloading of == operator
 bool edge::operator ==(const edge& other) const{
-	return (source == other.source && dest == other.dest)||(source == other.dest && dest == other.source); // Undirected graph so A-B = B-A
+	return (
+		((source == other.source && dest == other.dest)||(source == other.dest && dest == other.source))
+		&& weight == other.weight  // Undirected graph so A-B = B-A
+	);
 }
 
 ostream& operator<<(ostream& os, const edge& ed){
