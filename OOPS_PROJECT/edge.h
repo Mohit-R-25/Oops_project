@@ -1,5 +1,5 @@
-#ifndef edge_H
-#define edge_H
+#ifndef EDGE_H
+#define EDGE_H
 #include "vertex.h"
 #include <iostream>
 
