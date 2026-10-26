@@ -24,6 +24,12 @@ string vertex::get_label() const{
 	return ver;
 }
 
+
+istream& operator>>(istream& is, vertex& vtx){
+    is >> vtx.ver;
+    return is;
+}
+
 int vertex::get_count(){
 	return count;
 }
@@ -32,12 +38,6 @@ ostream& operator<<(ostream& os, const vertex& vtx){
     os << vtx.ver;
     return os;
 }
-
-istream& operator>>(istream& is, vertex& vtx){
-    is >> vtx.ver;
-    return is;
-}
-
 //Overloading of == operator
 bool vertex::operator==(const vertex& other) const {
     return ver == other.ver;
