@@ -23,7 +23,7 @@ class vertex{
         static int get_count();
 
         friend ostream& operator<<(ostream& os, const vertex& vtx);
-        friend istream& operator>>(istream& is, vertex& vtx)
+        friend istream& operator>>(istream& is, vertex& vtx);
 
 };
 #endif
